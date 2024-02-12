@@ -97,14 +97,15 @@ class Browser extends Region {
                 webEngine.load(url);
             });
         }
-        // load the web page
-        webEngine.load("http://www.oracle.com/products/index.html");
+
         // create the toolbar
         toolBar = new HBox();
         toolBar.setAlignment(Pos.CENTER);
         toolBar.getStyleClass().add("browser-toolbar");
         toolBar.getChildren().addAll(hpls);
         toolBar.getChildren().add(createSpacer());
+
+        comboBox.setPrefWidth(60);
         toolBar.getChildren().add(comboBox);
 
         //set action for the button
@@ -114,6 +115,8 @@ class Browser extends Region {
                 webEngine.executeScript("toggle_visibility('help_topics')");
             }
         });
+
+        smallView.setPrefSize(120, 80);
 
         //handle popup windows
         webEngine.setCreatePopupHandler(
@@ -165,7 +168,7 @@ class Browser extends Region {
 
 
         // load the web page
-        webEngine.load("http://www.oracle.com/products/index.html ");
+        webEngine.load("http://www.ieslosmontecillos.es/ ");
         //add components
         getChildren().add(toolBar);
         getChildren().add(browser);
