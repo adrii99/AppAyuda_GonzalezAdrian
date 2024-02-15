@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a33cd29-5118-4039-98d9-c7d48309502e" name="Changes" comment="terminar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9a33cd29-5118-4039-98d9-c7d48309502e" name="Changes" comment="terminado">
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/ieslosmontecillos/appayuda/WebViewSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/ieslosmontecillos/appayuda/AppAyuda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +66,7 @@
       <workItem from="1707764844456" duration="2298000" />
       <workItem from="1707767509884" duration="709000" />
       <workItem from="1707836690022" duration="10000" />
+      <workItem from="1708018579732" duration="753000" />
     </task>
     <task id="LOCAL-00001" summary="terminar">
       <option name="closed" value="true" />
@@ -83,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707768210925</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="terminado">
+      <option name="closed" value="true" />
+      <created>1708018688085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708018688085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="terminar" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminar" />
+    <MESSAGE value="terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado" />
   </component>
 </project>

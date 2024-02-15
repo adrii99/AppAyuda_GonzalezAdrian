@@ -30,23 +30,27 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import netscape.javascript.JSObject;
 
-public class WebViewSample extends Application {
+public class AppAyuda extends Application
+{
     private Scene scene;
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage)
+    {
         // create the scene
         stage.setTitle("Web View");
         scene = new Scene(new Browser(),750,500, Color.web("#666970"));
         stage.setScene(scene);
         scene.getStylesheets().add(
-                WebViewSample.class.getResource("css/BrowserToolbar.css").toExternalForm());
+                AppAyuda.class.getResource("css/BrowserToolbar.css").toExternalForm());
         stage.show();
     }
     public static void main(String[] args){
         launch(args);
     }
 }
-class Browser extends Region {
+
+class Browser extends Region
+{
     private HBox toolBar;
     private static String[] imageFiles = new String[]{
             "Img/moodle.jpg",
@@ -64,7 +68,7 @@ class Browser extends Region {
             "http://www.ieslosmontecillos.es/",
             "https://es-es.facebook.com/",
             "https://twitter.com",
-            WebViewSample.class.getResource("help.html").toExternalForm()
+            AppAyuda.class.getResource("help.html").toExternalForm()
     };
 
     final ImageView selectedImage = new ImageView();
@@ -80,7 +84,8 @@ class Browser extends Region {
     final WebView smallView = new WebView();
     final ComboBox comboBox = new ComboBox();
 
-    public Browser() {
+    public Browser()
+    {
         //apply the styles
         getStyleClass().add("browser");
         //Para tratar lo cuatroenlaces
@@ -165,8 +170,6 @@ class Browser extends Region {
                     }
                 });
 
-
-
         // load the web page
         webEngine.load("http://www.ieslosmontecillos.es/ ");
         //add components
@@ -175,29 +178,34 @@ class Browser extends Region {
     }
 
     // JavaScript interface object
-    public class JavaApp {
+    public class JavaApp
+    {
         public void exit() {
             Platform.exit();
         }
     }
 
-    private Node createSpacer() {
+    private Node createSpacer()
+    {
         Region spacer = new Region();
         HBox.setHgrow(spacer, Priority.ALWAYS);
         return spacer;
     }
     @Override
-    protected void layoutChildren() {
+    protected void layoutChildren()
+    {
         double w = getWidth();
         double h = getHeight();
         double tbHeight = toolBar.prefHeight(w);
         layoutInArea(browser,0,0,w,h-tbHeight,0, HPos.CENTER.CENTER, VPos.CENTER.CENTER);
         layoutInArea(toolBar,0,h-tbHeight,w,tbHeight,0,HPos.CENTER,VPos.CENTER);
     }
+
     @Override
     protected double computePrefWidth(double height) {
         return 750;
     }
+
     @Override
     protected double computePrefHeight(double width) {
         return 500;
